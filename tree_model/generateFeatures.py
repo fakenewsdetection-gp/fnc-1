@@ -58,15 +58,15 @@ def process():
         data["Headline_unigram"] = data["Headline"].map(lambda x: preprocess_data(x))
         data["articleBody_unigram"] = data["articleBody"].map(lambda x: preprocess_data(x))
 
-        print "generate bigram"
-        join_str = "_"
-        data["Headline_bigram"] = []
-        data["articleBody_bigram"] = []
+        # print "generate bigram"
+        # join_str = "_"
+        # data["Headline_bigram"] = []
+        # data["articleBody_bigram"] = []
         
-        print "generate trigram"
-        join_str = "_"
-        data["Headline_trigram"] = []
-        data["articleBody_trigram"] = []
+        # print "generate trigram"
+        # join_str = "_"
+        # data["Headline_trigram"] = []
+        # data["articleBody_trigram"] = []
         
         with open('data.pkl', 'wb') as outfile:
             cPickle.dump(data, outfile, -1)
