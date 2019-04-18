@@ -16,7 +16,8 @@ class CountFeatureGenerator(FeatureGenerator):
 
     def process(self, df):
 
-        grams = ["unigram", "bigram", "trigram"]
+        # grams = ["unigram", "bigram", "trigram"]
+        grams = ['unigram']
         feat_names = ["Headline", "articleBody"]
         print "generate counting features"
         for feat_name in feat_names:
