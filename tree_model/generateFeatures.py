@@ -60,13 +60,13 @@ def process():
 
         print "generate bigram"
         join_str = "_"
-        data["Headline_bigram"] = data["Headline_unigram"].map(lambda x: ngram.getBigram(x, join_str))
-        data["articleBody_bigram"] = data["articleBody_unigram"].map(lambda x: ngram.getBigram(x, join_str))
+        data["Headline_bigram"] = []
+        data["articleBody_bigram"] = []
         
         print "generate trigram"
         join_str = "_"
-        data["Headline_trigram"] = data["Headline_unigram"].map(lambda x: ngram.getTrigram(x, join_str))
-        data["articleBody_trigram"] = data["articleBody_unigram"].map(lambda x: ngram.getTrigram(x, join_str))
+        data["Headline_trigram"] = []
+        data["articleBody_trigram"] = []
         
         with open('data.pkl', 'wb') as outfile:
             cPickle.dump(data, outfile, -1)
